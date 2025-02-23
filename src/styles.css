@@ -1,0 +1,175 @@
+:root {
+    --primary-color: #1e1e1e;
+    --primary-hover: #333333;
+    --background: #f8fafc;
+    --text-color: #1e293b;
+    --border-color: #e2e8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    min-height: 1000px;
+    background: linear-gradient(to bottom, var(--background), #f1f5f9);
+    color: var(--text-color);
+    padding: 32px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.difficulty-section {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+h2 {
+    color: #64748b;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 16px;
+}
+
+.difficulty-btn {
+    padding: 8px 16px;
+    border: 2px solid var(--border-color);
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    min-width: 100px;
+    margin: 8px;
+}
+
+.difficulty-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.difficulty-btn.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.game-section {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+}
+
+.timer {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+#word-display {
+    text-align: center;
+    font-size: 20px;
+    min-height: 150px;
+    max-height: 300px;
+    margin: 16px 0;
+    padding: 16px;
+    font-weight: 500;
+    background: var(--background);
+    border-radius: 8px;
+    overflow-y: hidden;
+    overflow-y: auto;
+    line-height: 1.8;
+}
+
+/* hide scrollbar */
+#word-display::-webkit-scrollbar {
+    display: none;
+}
+
+/* word display styling */
+#word-display span {
+    display: inline-block;
+    padding: 2px 4px;
+    margin: 2px;
+    border-radius: 3px;
+}
+
+#word-display .correct {
+    color: #28a745;
+    background-color: rgba(40, 167, 69, 0.1);
+}
+
+#word-display .incorrect {
+    color: #dc3545;
+    background-color: rgba(220, 53, 69, 0.1);
+    text-decoration: line-through;
+}
+
+#word-display .current {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#word-input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 18px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+}
+
+#word-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+#word-input:disabled {
+    background: #f1f5f9;
+    cursor: not-allowed;
+}
+
+#results {
+    margin-top: 32px;
+    text-align: center;
+}
+
+#restart-btn {
+    display: block;
+    margin: 16px auto;
+    padding: 12px 32px;
+    font-size: 18px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#restart-btn:hover {
+    background: var(--primary-hover);
+}
+
+.instructions {
+    color: #64748b;
+    font-size: 16px;
+    margin-bottom: 16px;
+    font-style: italic;
+    text-align: center;
+}

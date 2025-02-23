@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Racer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Type Racer ⌨️</h1>
+        
+        <div class="difficulty-section">
+            <h2>Select Difficulty</h2>
+            <button class="difficulty-btn" data-difficulty="easy">Easy (5)</button>
+            <button class="difficulty-btn" data-difficulty="medium">Medium (10)</button>
+            <button class="difficulty-btn" data-difficulty="hard">Hard (20)</button>
+        </div>
+
+        <div class="game-section" style="display: none;">
+            <div class="timer">Time: <span id="time">0</span></div>
+            <div class="instructions">Type to start, press Tab to reload words</div>
+            <div id="word-display"></div>
+            <input type="text" id="word-input" placeholder="Start typing to begin..." disabled>
+            <div id="results" style="display: none;">
+                <h2>Game Over!</h2>
+                <p>Words typed correctly: <span id="correct-words">0</span></p>
+                <p>Accuracy: <span id="accuracy">0</span>%</p>
+                <button id="restart-btn">Play Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
