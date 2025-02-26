@@ -49,6 +49,9 @@ class TypeRacer {
         this.accuracyDisplay = document.getElementById('accuracy');
         this.restartBtn = document.getElementById('restart-btn');
 
+        // default difficulty on load
+        this.setupGame('medium');
+
         this.initializeEventListeners();
     }
 
